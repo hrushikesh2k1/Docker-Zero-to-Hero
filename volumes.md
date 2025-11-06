@@ -58,3 +58,11 @@ they can be managed and backed up separately from the host file system, and can 
 In a nutshell, Bind Directory on a host as a Mount are appropriate for simple use cases where you need to mount a directory from the host file system into
 a container, while volumes are better suited for more complex use cases where you need more control over the data being persisted
 in the container.
+
+Difference Between Bind Mounts and Volumes in Docker
+
+Feature                        	Bind Mounts	                                                                        Docker Volumes
+Definition	          Maps a directory from the host file system directly into the container.	                A Docker-managed storage location, stored under Docker’s control (usually /var/lib/docker/volumes).
+Created/Managed By	Created and managed manually by the user.	                                                      Created and managed automatically by Docker.
+Location	              You specify the exact path on the host (e.g., /home/user/data).	                        Docker decides the storage path, usually /var/lib/docker/volumes/<volume-name>/_data.
+Persistence            	Persists as long as the host path exists.                                              	Persists independently of
