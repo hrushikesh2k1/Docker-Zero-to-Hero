@@ -48,6 +48,8 @@ Downloads an image from the configured registry.
 ### docker push
 
 Uploads an image to the configured registry.
+ex: docker push mycontainerregistry.azurecr.io/myapp:latest
+
 
 ### docker exec
 
